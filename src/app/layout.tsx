@@ -1,8 +1,15 @@
+import TwSizeIndicator from "@/layouts/helpers/TwSizeIndecator";
+import Header from "@/layouts/partials/header";
+import Sidebar from "@/layouts/partials/sidebar";
+import "@/styles/main.scss";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { Inter, Outfit } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-secondary" });
+const roboto = Outfit({
+  variable: "--font-primary",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +23,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${roboto.className} ${inter.className}`}>
+        <TwSizeIndicator />
+        <Header />
+        <div className="hidden lg:block">
+          <aside className="lg:fixed max-lg:w-full bg-card left-0 top-0 z-50 w-full border-r border-r-border transition-[width] bottom-0 right-auto h-svh md:w-72">
+            <Sidebar />
+          </aside>
+        </div>
+        <main className="overflow-x-hidden transition-[margin] lg:overflow-y-hidden lg:ml-72 h-full p-6">
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
