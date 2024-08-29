@@ -25,15 +25,15 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${roboto.className} ${inter.className}`}>
         <TwSizeIndicator />
-        <Header />
-        <div className="hidden lg:block">
-          <aside className="lg:fixed max-lg:w-full bg-card left-0 top-0 z-50 w-full border-r border-r-border transition-[width] bottom-0 right-auto h-svh md:w-72">
+        <div className="inline-flex overflow-y-hidden">
+          <aside className="hidden lg:block border-r border-r-border transition-[width] md:w-72 flex-none bg-card">
             <Sidebar />
           </aside>
+          <div className="w-full">
+            <Header />
+            <main className="h-full p-6">{children}</main>
+          </div>
         </div>
-        <main className="overflow-x-hidden transition-[margin] lg:overflow-y-hidden lg:ml-72 h-full p-6">
-          {children}
-        </main>
       </body>
     </html>
   );

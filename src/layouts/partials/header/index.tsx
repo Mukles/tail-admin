@@ -8,7 +8,7 @@ import ProfileDashboardMenu from "./profile-menu";
 
 export default function Header() {
   return (
-    <header className="py-4 px-6 lg:ml-72 bg-white">
+    <header className="py-4 px-6 flex-1 bg-white">
       <nav className="flex items-center gap-6 justify-between">
         <div className="flex flex-1 gap-4 items-center">
           <Sheet>
@@ -21,7 +21,7 @@ export default function Header() {
                 <Icons.Hamburger className="w-5 h-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="left">
+            <SheetContent className="px-0" side="left">
               <Sidebar />
             </SheetContent>
           </Sheet>

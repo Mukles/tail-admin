@@ -17,7 +17,7 @@ import { Button } from "../components/ui/button";
 import { sidebarMenu } from "./header/data";
 export default function Sidebar() {
   return (
-    <div className="h-full overflow-auto px-5 pt-8">
+    <div className="h-full overflow-auto px-5 pt-8 relative">
       <div className="mb-7">
         <Link href="/">
           <Image src={"/images/logo.png"} alt="logo" width={154} height={32} />
@@ -74,7 +74,7 @@ export default function Sidebar() {
         })}
       </nav>
 
-      <Card className="bg-background text-center mt-auto">
+      <Card className="bg-background text-center mb-5 absolute bottom-1 right-5 left-5">
         <CardHeader className="pb-4">
           <CardTitle className="font-semibold text-base">
             TailAdmin Pro

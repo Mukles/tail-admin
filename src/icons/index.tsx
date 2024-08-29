@@ -42,9 +42,9 @@ export function Dark(props: React.SVGProps<SVGSVGElement>) {
       <path
         d="M5.24673 6.08494C5.24673 9.76773 8.23223 12.7532 11.915 12.7532C13.6686 12.7532 15.264 12.0764 16.4544 10.9697C15.5839 14.2727 12.5764 16.7083 8.99999 16.7083C4.74279 16.7083 1.29166 13.2572 1.29166 8.99997C1.29166 5.42357 3.72727 2.41604 7.03027 1.54559C5.92358 2.73595 5.24673 4.3314 5.24673 6.08494Z"
         stroke="#667085"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -61,8 +61,8 @@ export function Notification(props: React.SVGProps<SVGSVGElement>) {
       {...props}
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M10.75 2.2923C10.75 1.87808 10.4142 1.5423 10 1.5423C9.5858 1.5423 9.25001 1.87808 9.25001 2.2923V2.83595C6.08263 3.20715 3.62501 5.90022 3.62501 9.1673V14.459H3.33334C2.91913 14.459 2.58334 14.7948 2.58334 15.209C2.58334 15.6232 2.91913 15.959 3.33334 15.959H4.37501H15.625H16.6667C17.0809 15.959 17.4167 15.6232 17.4167 15.209C17.4167 14.7948 17.0809 14.459 16.6667 14.459H16.375V9.1673C16.375 5.90022 13.9174 3.20715 10.75 2.83595V2.2923ZM14.875 14.459V9.1673C14.875 6.47491 12.6924 4.2923 10 4.2923C7.30762 4.2923 5.12501 6.47491 5.12501 9.1673V14.459H14.875ZM8.00001 17.7084C8.00001 18.1226 8.3358 18.4584 8.75001 18.4584H11.25C11.6642 18.4584 12 18.1226 12 17.7084C12 17.2941 11.6642 16.9584 11.25 16.9584H8.75001C8.3358 16.9584 8.00001 17.2941 8.00001 17.7084Z"
         fill="#667085"
       />
@@ -83,9 +83,9 @@ export function ChevronDown(props: React.SVGProps<SVGSVGElement>) {
       <path
         d="M1.3125 1.65625L6 6.34375L10.6875 1.65625"
         stroke="#667085"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -155,6 +155,51 @@ export function ArrowIcon(props: React.SVGProps<SVGSVGElement>) {
         fill="currentColor"
         fillRule="evenodd"
         d="M3.565.624a.748.748 0 0 1 .558-.25h.001c.192 0 .384.073.531.22l3 2.998a.75.75 0 1 1-1.06 1.06l-1.722-1.72v6.193a.75.75 0 1 1-1.5 0v-6.19L1.655 4.654a.75.75 0 0 1-1.06-1.061L3.565.624Z"
+        clipRule="evenodd"
+      />
+    </svg>
+  );
+}
+
+export function FilterIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={20}
+      height={20}
+      fill="none"
+      {...props}
+    >
+      <path
+        stroke="#344054"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1.5}
+        d="M2.29 5.904h15.417M17.707 14.096H2.291"
+      />
+      <path
+        fill="#fff"
+        stroke="#344054"
+        strokeWidth={1.5}
+        d="M12.083 3.333a2.57 2.57 0 1 1 0 5.142 2.57 2.57 0 0 1 0-5.142ZM7.917 11.525a2.57 2.57 0 1 0 0 5.142 2.57 2.57 0 0 0 0-5.142Z"
+      />
+    </svg>
+  );
+}
+
+export function Box(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={20}
+      height={20}
+      fill="none"
+      {...props}
+    >
+      <path
+        fill="#1D2939"
+        fillRule="evenodd"
+        d="M9.665 1.756a.75.75 0 0 1 .67 0l6.446 3.223L10.336 8.2a.75.75 0 0 1-.671 0L3.22 4.979l6.445-3.223ZM2.293 6.192v7.903c0 .284.16.543.415.67l6.542 3.271V9.652a2.251 2.251 0 0 1-.256-.108L2.293 6.192Zm8.457 11.845 6.543-3.272a.75.75 0 0 0 .415-.67V6.192l-6.701 3.35c-.084.042-.17.079-.257.11v8.385ZM11.007.415a2.25 2.25 0 0 0-2.013 0L2.037 3.893A2.25 2.25 0 0 0 .793 5.906v8.189a2.25 2.25 0 0 0 1.244 2.012l6.957 3.479.336-.671-.336.67a2.25 2.25 0 0 0 2.013 0l6.957-3.478a2.25 2.25 0 0 0 1.244-2.012v-8.19a2.25 2.25 0 0 0-1.244-2.012L11.007.415Z"
         clipRule="evenodd"
       />
     </svg>
