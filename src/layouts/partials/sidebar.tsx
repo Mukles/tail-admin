@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
+import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
 import { sidebarMenu } from "./header/data";
 export default function Sidebar() {
@@ -52,17 +53,28 @@ export default function Sidebar() {
                       </AccordionTrigger>
                       {menu.children && (
                         <AccordionContent>
-                          {menu.children.map((child) => (
-                            <Link
-                              key={child.name}
-                              className="nav-link block ml-7 group rounded"
-                              href={child.url}
-                            >
-                              <span className="text-foreground group-hover:text-primary">
-                                {child.name}
-                              </span>
-                            </Link>
-                          ))}
+                          <ul className="pt-1.5">
+                            {menu.children.map((child) => (
+                              <li key={child.name}>
+                                <Link
+                                  className="nav-link block ml-7 group rounded-md relative"
+                                  href={child.url}
+                                >
+                                  <span className="text-foreground group-hover:text-primary">
+                                    {child.name}
+                                  </span>
+                                  {child?.tag && (
+                                    <Badge
+                                      className="absolute top-1/2 -translate-y-1/2 right-2"
+                                      variant={"default"}
+                                    >
+                                      {child.tag}
+                                    </Badge>
+                                  )}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
                         </AccordionContent>
                       )}
                     </AccordionItem>

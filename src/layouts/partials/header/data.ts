@@ -33,7 +33,7 @@ const menuItems = {
     { url: "/analytics", name: "Analytics" },
     { url: "/marketing", name: "Marketing" },
     { url: "/crm", name: "CRM" },
-    { url: "/stocks", name: "Stocks" },
+    { url: "/stocks", name: "Stocks", tag: "new" },
   ],
   support: [
     { url: "/help", name: "Help" },

@@ -1,6 +1,15 @@
-import { Card, CardDescription, CardHeader } from "@/components/ui/card";
+"use client";
+
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+} from "@/components/ui/card";
 import * as Icons from "@/icons";
+import { Chart } from "react-google-charts";
 import { Button } from "../ui/button";
+import { data } from "./data";
 
 export function Demographic() {
   return (
@@ -20,6 +29,26 @@ export function Demographic() {
           </Button>
         </div>
       </CardHeader>
+      <CardContent className="h-full">
+        <div>
+          <Chart
+            chartEvents={[
+              {
+                eventName: "select",
+                callback: ({ chartWrapper }) => {
+                  const chart = chartWrapper.getChart();
+                  const selection = chart.getSelection();
+                  if (selection.length === 0) return;
+                  const region = data[selection[0].row + 1];
+                  console.log("Selected : " + region);
+                },
+              },
+            ]}
+            chartType="GeoChart"
+            data={data}
+          />
+        </div>
+      </CardContent>
     </Card>
   );
 }

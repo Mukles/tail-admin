@@ -3,6 +3,7 @@ import Header from "@/layouts/partials/header";
 import Sidebar from "@/layouts/partials/sidebar";
 import "@/styles/main.scss";
 import type { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
 import { Inter, Outfit } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-secondary" });
@@ -24,16 +25,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${roboto.className} ${inter.className}`}>
-        <TwSizeIndicator />
-        <div className="inline-flex overflow-y-hidden">
-          <aside className="hidden lg:block border-r border-r-border transition-[width] md:w-72 flex-none bg-card">
-            <Sidebar />
-          </aside>
-          <div className="w-full">
-            <Header />
-            <main className="h-full p-6">{children}</main>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme={"dark"}
+          enableColorScheme={false}
+        >
+          <TwSizeIndicator />
+          <div className="inline-flex overflow-y-hidden w-full">
+            <aside className="hidden lg:block border-r border-r-border transition-[width] md:w-72 flex-none bg-card">
+              <Sidebar />
+            </aside>
+            <div className="w-full">
+              <Header />
+              <main className="h-full p-6 w-full">{children}</main>
+            </div>
           </div>
-        </div>
+        </ThemeProvider>
       </body>
     </html>
   );

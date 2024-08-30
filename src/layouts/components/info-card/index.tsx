@@ -20,7 +20,7 @@ export default function InfoCard({
   return (
     <Card className="p-6">
       <Button
-        className="w-12 border-0 h-12 rounded-lg mb-5"
+        className="w-12 border-0 h-12 rounded-lg mb-4"
         variant={"outline"}
         size={"icon"}
       >

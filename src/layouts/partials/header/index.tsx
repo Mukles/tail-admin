@@ -4,17 +4,18 @@ import { Label } from "@/components/ui/label";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import * as Icons from "@/icons";
 import Sidebar from "../sidebar";
+import ThemeSwitcher from "../theme-switcher";
 import ProfileDashboardMenu from "./profile-menu";
 
 export default function Header() {
   return (
-    <header className="py-4 px-6 flex-1 bg-white">
+    <header className="py-4 px-6 flex-1 bg-card border-b border-border">
       <nav className="flex items-center gap-6 justify-between">
         <div className="flex flex-1 gap-4 items-center">
           <Sheet>
             <SheetTrigger asChild>
               <Button
-                className="bg-white w-11 h-11"
+                className="bg-card w-11 h-11"
                 variant={"outline"}
                 size={"icon"}
               >
@@ -60,13 +61,7 @@ export default function Header() {
               </Button>
             </li>
             <li className="relative flex items-center">
-              <Button
-                className="rounded-full border border-border bg-transparent"
-                variant={"outline"}
-                size={"icon"}
-              >
-                <Icons.Dark />
-              </Button>
+              <ThemeSwitcher />
             </li>
             <li className="relative flex items-center">
               <Button

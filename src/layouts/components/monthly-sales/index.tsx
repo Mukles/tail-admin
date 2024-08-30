@@ -4,47 +4,25 @@ import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
-  ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-const chartData = [
-  { month: "January", desktop: 186 },
-  { month: "February", desktop: 305 },
-  { month: "March", desktop: 237 },
-  { month: "April", desktop: 73 },
-  { month: "May", desktop: 209 },
-  { month: "June", desktop: 214 },
-  { month: "July", desktop: 186 },
-  { month: "August", desktop: 305 },
-  { month: "October", desktop: 237 },
-  { month: "November", desktop: 73 },
-  { month: "December", desktop: 209 },
-];
+import { EllipsisVertical } from "lucide-react";
+import { chartConfig, chartData } from "./data";
 
-const chartConfig = {
-  desktop: {
-    label: "Desktop",
-    color: "hsl(var(--chart-1))",
-  },
-} satisfies ChartConfig;
-
-export function BarChartComponent() {
+export function MonthlySales() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-title">Monthly Slaes</CardTitle>
+        <CardTitle className="text-lg font-bold flex justify-between">
+          Monthly Slaes
+          <EllipsisVertical className="size-5 ml-auto text-secondary-foreground" />
+        </CardTitle>
       </CardHeader>
-      <CardContent>
-        <ChartContainer className="h-[188px] w-full" config={chartConfig}>
-          <BarChart
-            margin={{ top: 20, right: 30, bottom: 5, left: -28 }}
-            barSize={20}
-            barGap={5}
-            accessibilityLayer
-            data={chartData}
-          >
+      <CardContent className="px-0 pr-5">
+        <ChartContainer config={chartConfig} className="h-[188px] w-full">
+          <BarChart barSize={20} barGap={5} accessibilityLayer data={chartData}>
             <CartesianGrid vertical={false} />
             <YAxis
               tickLine={false}
@@ -65,11 +43,14 @@ export function BarChartComponent() {
             />
             <ChartTooltip
               cursor={false}
-              content={<ChartTooltipContent hideLabel />}
+              content={
+                <ChartTooltipContent className="text-primary" hideLabel />
+              }
             />
             <Bar
+              className="text-accent hover:text-primary transition"
               dataKey="desktop"
-              fill="var(--color-desktop)"
+              fill="currentColor"
               radius={[6, 6, 0, 0]}
             />
           </BarChart>
