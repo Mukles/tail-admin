@@ -37,7 +37,7 @@ export default function RootLayout({
             </aside>
             <div className="w-full">
               <Header />
-              <main className="h-full p-6 w-full">{children}</main>
+              <main className="h-full p-6">{children}</main>
             </div>
           </div>
         </ThemeProvider>
