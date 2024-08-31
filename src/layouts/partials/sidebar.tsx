@@ -13,7 +13,7 @@ export default function Sidebar({ children }: { children?: React.ReactNode }) {
     <div className="h-full overflow-auto px-5 pt-8 relative">
       <div className="mb-7">
         <Link href="/">
-          <Image src={"/images/logo.png"} alt="logo" width={154} height={32} />
+          <Image src={"/images/Logo.png"} alt="logo" width={154} height={32} />
         </Link>
       </div>
 
