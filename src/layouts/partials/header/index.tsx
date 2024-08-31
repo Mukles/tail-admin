@@ -65,11 +65,12 @@ export default function Header() {
             </li>
             <li className="relative flex items-center">
               <Button
-                className="rounded-full border border-border bg-transparent"
+                className="rounded-full border border-border bg-transparent relative"
                 variant={"outline"}
                 size={"icon"}
               >
                 <Icons.Notification />
+                <span className="absolute top-0 right-1 size-1 bg-warning z-30 rounded-full"></span>
               </Button>
             </li>
             <li className="relative flex items-center">

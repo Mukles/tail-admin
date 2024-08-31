@@ -9,9 +9,23 @@ export const data = [
 ];
 
 export const options = {
-  region: "world", // Display the world map
-  colorAxis: { colors: ["#e7f0fd", "#08306b"] }, // Color gradient for values
-  backgroundColor: "#81d4fa",
-  datalessRegionColor: "#f8bbd0",
-  defaultColor: "#f5f5f5",
+  region: "world",
+  displayMode: "markers",
+  backgroundColor: "#F2F4F7",
+  colorAxis: { colors: ["green", "blue"] },
 };
+
+export const customers = [
+  {
+    totalCustomers: "2,379",
+    country: "USA",
+    progress: "79",
+    image: "/images/US.png",
+  },
+  {
+    totalCustomers: "589",
+    country: "France",
+    progress: "23",
+    image: "/images/FR.png",
+  },
+];

@@ -40,7 +40,9 @@ export default function MonthlyTarget() {
       <CardHeader className="bg-card">
         <div className="flex justify-between">
           <div>
-            <h3 className="text-title text-lg font-semibold">Monthly Target</h3>
+            <h3 className="text-title text-lg font-semibold mb-1">
+              Monthly Target
+            </h3>
             <CardDescription>
               Number of customer based on country
             </CardDescription>

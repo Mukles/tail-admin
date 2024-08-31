@@ -1,6 +1,6 @@
 import Invoice from "@/components/invoice";
 import { Statistics } from "@/components/statistics";
-import { Demographic } from "@/layouts/components/demographic";
+import Demographic from "@/layouts/components/demographic";
 import InfoCard from "@/layouts/components/info-card";
 import { infoData } from "@/layouts/components/info-card/data";
 import { MonthlySales } from "@/layouts/components/monthly-sales";
@@ -30,17 +30,19 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="md:col-span-5 col-span-12 h-full">
+        <div className="md:col-span-5 col-span-12">
           <MonthlyTarget />
         </div>
       </div>
       <Statistics />
-      <div className="grid grid-cols-12 gap-6">
-        <div className="lg:col-span-4 col-span-12 h-full">
-          <Demographic />
-        </div>
-        <div className="lg:col-span-8 col-span-12">
-          <Invoice />
+      <div>
+        <div className="grid grid-cols-12 gap-6">
+          <div className="lg:col-span-5 col-span-12 h-full">
+            <Demographic />
+          </div>
+          <div className="lg:col-span-7 col-span-12">
+            <Invoice />
+          </div>
         </div>
       </div>
     </section>

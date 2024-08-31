@@ -49,7 +49,7 @@ export default function Invoice() {
         <Table className="border-t border-t-border">
           <TableHeader>
             <TableRow>
-              <TableHead>Products</TableHead>
+              <TableHead className="min-w-[200px]">Products</TableHead>
               <TableHead>Category</TableHead>
               <TableHead>Price</TableHead>
               <TableHead className="text-left w-[96px]">Status</TableHead>

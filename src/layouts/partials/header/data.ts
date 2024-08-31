@@ -55,6 +55,30 @@ export const sidebarMenu = [
         name: "Calendar",
         icon: Icons.CalendarIcon,
       },
+      {
+        name: "Profile",
+        icon: Icons.PersonIcon,
+      },
+      {
+        name: "Task",
+        icon: Icons.TaskIcon,
+        children: menuItems.dashboard,
+      },
+      {
+        name: "Forms",
+        icon: Icons.FormsIcon,
+        children: menuItems.support,
+      },
+      {
+        name: "Tables",
+        icon: Icons.TableIcon,
+        children: menuItems.support,
+      },
+      {
+        name: "Pages",
+        icon: Icons.PagesIcon,
+        children: menuItems.support,
+      },
     ],
   },
   {
@@ -62,13 +86,16 @@ export const sidebarMenu = [
     name: "Supports",
     children: [
       {
-        name: "Dashboard",
-        icon: Icons.DashboardIcon,
-        children: menuItems.dashboard,
+        name: "Message",
+        icon: Icons.MessageIcon,
       },
       {
-        name: "Calendar",
-        icon: Icons.CalendarIcon,
+        name: "Inbox",
+        icon: Icons.InboxIcon,
+      },
+      {
+        name: "Invoice",
+        icon: Icons.InvoiceIcon,
       },
     ],
   },

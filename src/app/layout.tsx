@@ -1,3 +1,11 @@
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import TwSizeIndicator from "@/layouts/helpers/TwSizeIndecator";
 import Header from "@/layouts/partials/header";
 import Sidebar from "@/layouts/partials/sidebar";
@@ -33,7 +41,24 @@ export default function RootLayout({
           <TwSizeIndicator />
           <div className="inline-flex overflow-y-hidden w-full">
             <aside className="hidden lg:block border-r border-r-border transition-[width] md:w-72 flex-none bg-card">
-              <Sidebar />
+              <Sidebar>
+                <Card className="bg-background text-center mb-5 absolute bottom-1 right-5 left-5">
+                  <CardHeader className="pb-4">
+                    <CardTitle className="font-semibold text-base">
+                      TailAdmin Pro
+                    </CardTitle>
+                    <CardDescription>
+                      Get all dashboard and 300+ essential UI elements
+                    </CardDescription>
+                  </CardHeader>
+
+                  <CardFooter>
+                    <Button className="mx-auto" size={"lg"}>
+                      Upgrade Plan
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </Sidebar>
             </aside>
             <div className="w-full">
               <Header />
