@@ -56,11 +56,13 @@ export default function Sidebar({ children }: { children?: React.ReactNode }) {
                                   <span className="text-foreground group-hover:text-primary">
                                     {child.name}
                                   </span>
+                                  {/* @ts-ignore */}
                                   {child?.tag && (
                                     <Badge
                                       className="absolute top-1/2 -translate-y-1/2 right-2"
                                       variant={"default"}
                                     >
+                                      {/* @ts-ignore */}
                                       {child.tag}
                                     </Badge>
                                   )}
