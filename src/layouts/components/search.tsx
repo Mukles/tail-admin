@@ -44,6 +44,7 @@ export default function Search() {
     <>
       <div className="relative flex items-center md:hidden ml-auto">
         <Button
+          onClick={() => onOpenChange(true)}
           className="rounded-full border border-border bg-transparent "
           variant={"outline"}
           size={"icon"}
