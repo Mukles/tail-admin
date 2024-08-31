@@ -10,15 +10,17 @@ export default function InfoCard({
   ratings,
   varients,
   icon,
+  className,
 }: {
   title: string;
   amount: string;
   ratings: string;
   varients: BadgeProps["variant"];
   icon: React.ReactNode;
+  className: string;
 }) {
   return (
-    <Card className="p-6">
+    <Card className={cn("p-6", className)}>
       <Button
         className="w-12 border-0 h-12 rounded-lg mb-4"
         variant={"outline"}

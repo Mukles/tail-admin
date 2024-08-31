@@ -15,6 +15,7 @@ export default function Home() {
             {infoData.map((item, index) => {
               return (
                 <InfoCard
+                  className="sm:col-span-1 col-span-2"
                   key={index}
                   amount={item.value}
                   title={item.title}
