@@ -11,7 +11,7 @@ export default function Home() {
     <section className="space-y-6">
       <div className="grid grid-cols-12 gap-6">
         <div className="md:col-span-7 col-span-12">
-          <div className="grid gap-6 sm:grid-cols-2">
+          <div className="grid gap-6 grid-cols-1 sm:grid-cols-2">
             {infoData.map((item, index) => {
               return (
                 <InfoCard
@@ -25,7 +25,6 @@ export default function Home() {
                 />
               );
             })}
-
             <div className="col-span-2">
               <MonthlySales />
             </div>
